@@ -7,7 +7,6 @@ services:
       - ./frontend:/usr/share/nginx/html
 
   backend:
-    image: demo-microservice
     platform: wasi/wasm
     build:
       context: backend/

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM rust:1.68.2 AS base
+FROM --platform=$BUILDPLATFORM rust:1.68.2 AS base
 WORKDIR /src
 RUN apt-get update && \
  apt-get install -y git clang && \
